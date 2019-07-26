@@ -1,7 +1,7 @@
-# ai pros team app 
+# ai pro team app 
 on recursive ai protocol for social networks
 
 ### Packages
-'''python
+```python
 pip install pytest-html
-'''
+```
