@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuite errors="0" failures="0" name="pytest" skipped="0" tests="9" time="6.395">
+    <testcase classname="test_widget" file="test_widget.py" line="0" name="test_widget_functions_as_expected" time="0.001"></testcase>
+    <testcase classname="test_widget" file="test_widget.py" line="3" name="test_widget_fails" time="0.001"></testcase>
+    <testcase classname="teams.colleagues.test_projects.ProjectsTests" file="../../../workspace/0-courses/pytest/network/colleagues/test_projects.py" line="7" name="test_can_navigate_to_projects_page" time="2.521"></testcase>
+    <testcase classname="teams.colleagues.test_projects.ProjectsTests" file="../../../workspace/0-courses/pytest/network/colleagues/test_projects.py" line="11" name="test_budget" time="0.001"></testcase>
+    <testcase classname="teams.colleagues.test_projects.ProjectsTests" file="../../../workspace/0-courses/pytest/network/colleagues/test_projects.py" line="14" name="test_coolness" time="0.002"></testcase>
+    <testcase classname="teams.employers.test_jobs.JobsTests" file="../../../workspace/0-courses/pytest/network/employers/test_jobs.py" line="6" name="test_can_navigate_to_jobs_page" time="0.468"></testcase>
+    <testcase classname="teams.employers.test_jobs.JobsTests" file="../../../workspace/0-courses/pytest/network/employers/test_jobs.py" line="11" name="test_culture" time="0.001"></testcase>
+    <testcase classname="teams.employers.test_jobs.JobsTests" file="../../../workspace/0-courses/pytest/network/employers/test_jobs.py" line="14" name="test_coolness" time="0.001"></testcase>
+    <testcase classname="teams.play.test_browse" file="teams/play/test_browse.py" line="4" name="test_can_browse_page" time="3.352">
+        <system-out>I am tearing down this browser
+        </system-out>
+    </testcase>
+</testsuite>
