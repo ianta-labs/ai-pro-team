@@ -3,12 +3,14 @@ class Config:
 
         self.base_url = {
             'dev': 'https://mydev-env.com',
-            'qa': 'https://myqa-env.com'
+            'qa': 'https://myqa-env.com',
+            'stage': 'https://mystage-env.com'
         }[env]
 
         self.app_port = {
             'dev': 8080,
-            'qa': 80
+            'qa': 80,
+            'stage': 8088
         }[env]
 
 
