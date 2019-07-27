@@ -14,3 +14,12 @@ def chrome_browser():
     # teardown
     print('I am tearing down this browser')
 
+# ---------------- Jul 27, 2019 - pytest course ---------------------
+
+def pytest_addoption(parser):
+    parser.addoption(
+        "--env",
+        action="store",
+        default="dev",
+        help="Environment to run tests against"
+        )
