@@ -7,11 +7,11 @@ from selenium import webdriver
 # ---------------- Jul 27, 2019 - pytest course ---------------------
 def pytest_addoption(parser):
     parser.addoption(
-        "--env",
-        action="store",
-        default="dev",
-        help="Environment to run tests against"
-        )
+	"--env",
+	action="store",
+	default="dev",
+	help="Environment to run tests against"
+	)
 
 @fixture(scope='session')
 def env(request):
@@ -21,7 +21,6 @@ def env(request):
 def app_config(env):
     cfg = Config(env)
     return cfg
-
 
 '''
 scope='function' - for each test function
@@ -35,3 +34,11 @@ def chrome_browser():
     # teardown - everything after yield
     print('I am tearing down this browser')
 
+# ToDo - add webdriver.Firefox & webdriver.Edge
+# test will be run for each item inn the params list
+@fixture(params=[webdriver.Chrome, webdriver.Firefox, webdriver.Edge])
+def browser(request):
+    driver = request.param
+    drvr = driver()
+    yield drvr
+    drvr.quit()
