@@ -1,6 +1,6 @@
 from pytest import mark
 
-@mark.skip
+@mark.xfail(reason="Env was not QA")
 def check_environment_is_qa(app_config):
     base_url = app_config.base_url
     port = app_config.app_port
@@ -14,7 +14,7 @@ def check_environment_is_dev(app_config):
     assert base_url == 'https://mydev-env.com'
     assert port == 8080
 
-@mark.skip
+@mark.skip(reason="Not a staging environment")
 def check_environment_is_stage(app_config):
     base_url = app_config.base_url
     assert base_url == 'stage'
