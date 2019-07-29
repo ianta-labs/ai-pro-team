@@ -9,8 +9,8 @@ from config import Config
 data_path = 'test_data.json'
 
 # Confirm current test directory
-print('--- Current folder files:')
-print(os.listdir())
+# print('--- Current folder files:')
+# print(os.listdir())
 
 def load_test_data(path):
 	with open(path) as data_file:
