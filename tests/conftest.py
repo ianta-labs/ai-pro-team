@@ -1,8 +1,23 @@
+import json
+
 from pytest import fixture
+from selenium import webdriver
 
 from config import Config
 
-from selenium import webdriver
+data_path = 'test_data.json'
+
+def load_test_data(path):
+	with open(path) as data_file:
+		data = json.load(data_file)
+		return data
+		# returns data in a dictionary form
+
+@fixture(params=load_test_data(data_path))
+def test_data(request):
+	data = request.param
+	return data
+
 
 # ---------------- Jul 27, 2019 - pytest course ---------------------
 def pytest_addoption(parser):
@@ -36,7 +51,7 @@ def chrome_browser():
 
 # ToDo - add webdriver.Firefox & webdriver.Edge
 # test will be run for each item inn the params list
-@fixture(params=[webdriver.Chrome, webdriver.Firefox, webdriver.Edge])
+@fixture(params=[webdriver.Chrome])
 def browser(request):
     driver = request.param
     drvr = driver()
