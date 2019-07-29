@@ -1,3 +1,4 @@
+import os
 import json
 
 from pytest import fixture
@@ -7,14 +8,19 @@ from config import Config
 
 data_path = 'test_data.json'
 
+# Confirm current test directory
+print('--- Current folder files:')
+print(os.listdir())
+
 def load_test_data(path):
 	with open(path) as data_file:
 		data = json.load(data_file)
 		return data
 		# returns data in a dictionary form
 
+# def test_data(request):
 @fixture(params=load_test_data(data_path))
-def test_data(request):
+def tv_brand(request):
 	data = request.param
 	return data
 
